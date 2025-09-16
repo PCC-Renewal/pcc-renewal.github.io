@@ -1,0 +1,131 @@
+/* Home page specific styles */
+
+.section {
+    padding: 32px 20px; /* slightly increased margins */
+    margin: 0; /* no extra outside spacing */
+}
+
+.section--light {
+    background: #ffffff;
+}
+
+.section-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+}
+
+.section-title {
+    font-family: "Tex Gyre Schola", serif;
+    font-size: 48px;
+    line-height: 1.2;
+    color: rgb(31, 56, 120);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 24px 16px;
+    }
+    .section-title {
+        font-size: 36px;
+    }
+    .section-inner {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 20px 12px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .section-inner {
+        gap: 16px;
+    }
+}
+
+/* Image section */
+.image-section {
+    width: 100%;
+    margin: 0; /* make sure no extra gap */
+    padding: 0; /* remove extra inner spacing */
+}
+
+/* Image section img */
+.image-section-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .image-section {
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-section {
+        padding: 0;
+    }
+}
+
+/* Beliefs section narrower */
+#beliefs .section-inner {
+    max-width: 650px;
+}
+
+/* Belief items with icons */
+.belief-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.belief-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    object-fit: contain;
+    display: block;
+}
+
+.belief-item p {
+    margin: 0;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .belief-item {
+        gap: 18px;
+        max-width: 700px;
+    }
+
+    .belief-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .belief-item {
+        gap: 14px;
+        max-width: 560px;
+    }
+
+    .belief-icon {
+        width: 32px;
+        height: 32px;
+    }
+}

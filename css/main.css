@@ -230,6 +230,9 @@ h4 {
     .nav .nav-group {
         display: none;
     }
+    .nav {
+        justify-content: flex-start;
+    }
     .page {
         padding-left: 0;
         padding-right: 0;

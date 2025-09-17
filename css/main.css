@@ -121,7 +121,7 @@ h4 {
     gap: 24px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 12px 20px;
+    padding: 16px 20px;
     flex-wrap: wrap;
 }
 
@@ -160,8 +160,8 @@ h4 {
 /* Mobile hamburger */
 .hamburger {
     position: fixed;
-    top: 12px;
-    right: 12px;
+    top: 16px;
+    right: 16px;
     width: 44px;
     height: 40px;
     display: none;
@@ -192,7 +192,7 @@ h4 {
     max-width: 320px;
     background: #ffffff;
     box-shadow: -12px 0 24px rgba(0, 0, 0, 0.15);
-    padding: 72px 20px 20px;
+    padding: 80px 20px 20px;
     z-index: 999;
 }
 
@@ -232,6 +232,7 @@ h4 {
     }
     .nav {
         justify-content: flex-start;
+        padding-left: 16px;
     }
     .page {
         padding-left: 0;

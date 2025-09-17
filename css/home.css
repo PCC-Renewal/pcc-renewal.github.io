@@ -77,6 +77,36 @@
     }
 }
 
+/* Additional bottom padding for text sections */
+#mission {
+    padding-bottom: 56px;
+}
+
+#beliefs {
+    padding-bottom: 56px;
+}
+
+/* Responsive bottom padding adjustments */
+@media (max-width: 768px) {
+    #mission {
+        padding-bottom: 36px;
+    }
+
+    #beliefs {
+        padding-bottom: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    #mission {
+        padding-bottom: 32px;
+    }
+
+    #beliefs {
+        padding-bottom: 32px;
+    }
+}
+
 /* Beliefs section narrower */
 #beliefs .section-inner {
     max-width: 650px;

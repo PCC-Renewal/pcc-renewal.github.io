@@ -1,0 +1,238 @@
+/* Resources page specific styles */
+
+.section {
+    padding: 32px 20px;
+    margin: 0;
+}
+
+.section--light {
+    background: #ffffff;
+}
+
+.section-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+}
+
+.section-title {
+    font-family: "Tex Gyre Schola", serif;
+    font-size: 48px;
+    line-height: 1.2;
+    color: rgb(31, 56, 120);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 24px 16px;
+    }
+    .section-title {
+        font-size: 36px;
+    }
+    .section-inner {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 20px 12px;
+    }
+    .section-title {
+        font-size: 28px;
+    }
+    .section-inner {
+        gap: 16px;
+    }
+}
+
+/* Resources list */
+.resources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.resource-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.resource-item h3 {
+    margin: 0 0 8px 0;
+    font-family: "Tex Gyre Schola", serif;
+    font-size: 24px;
+    color: rgb(31, 56, 120);
+}
+
+.resource-item p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.resource-item a {
+    color: rgb(22, 79, 184);
+    text-decoration: none;
+}
+
+.resource-item a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .resource-item {
+        padding: 16px;
+    }
+    .resource-item h3 {
+        font-size: 20px;
+    }
+    .resource-item p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .resource-item {
+        padding: 12px;
+    }
+    .resource-item h3 {
+        font-size: 18px;
+    }
+    .resource-item p {
+        font-size: 14px;
+    }
+}
+
+/* Resources hero-like section */
+#resources {
+    width: 100%;
+    min-height: 50vh;
+    background-image: url("../images/page 3/page 3 pic 1.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.resources-inner {
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 32px 20px;
+    gap: 12px;
+    text-align: center;
+}
+
+.resources-inner p {
+    color: #ffffff;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+    max-width: 60ch;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments for resources section */
+@media (max-width: 768px) {
+    #resources {
+        min-height: 40vh;
+    }
+    .resources-inner {
+        padding: 24px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #resources {
+        min-height: 30vh;
+    }
+    .resources-inner {
+        padding: 16px 12px;
+    }
+}
+
+/* Italic text */
+.italic {
+    font-style: italic;
+}
+
+/* Bottom borders and extra bottom padding for sections */
+#section1,
+#section2 {
+    border-bottom: 2px solid rgb(110, 127, 217);
+    padding-bottom: 56px;
+}
+
+/* Responsive bottom padding adjustments */
+@media (max-width: 768px) {
+    #section1,
+    #section2 {
+        padding-bottom: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    #section1,
+    #section2 {
+        padding-bottom: 32px;
+    }
+}
+
+/* Button link style */
+.button-link {
+    background: rgb(22, 79, 184);
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Constantia", serif;
+    font-size: 20px;
+}
+
+/* Bold and italic paragraph in section3 */
+#section3 .section-inner p {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Divider above section4 */
+#section4 {
+    border-top: 2px solid rgb(110, 127, 217);
+}
+
+/* Logo box */
+.logo-box {
+    border: 2px solid rgb(110, 127, 217);
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    background: #ffffff;
+}
+
+.logo-in-box {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+/* Bold and italic for title paragraph in section4 */
+#section4 .section-inner p:first-child {
+    font-weight: bold;
+    font-style: italic;
+}

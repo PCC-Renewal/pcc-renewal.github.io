@@ -1,0 +1,626 @@
+/* Get Involved page specific styles */
+
+/* Strategy Hero Section */
+#strategy-hero {
+    width: 100%;
+    min-height: auto;
+    background-image: url("../images/page 4/page 4 pic 1.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-bottom: 2px solid rgb(110, 127, 217);
+}
+
+.strategy-hero-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 48px 20px 56px;
+    gap: 32px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.strategy-title {
+    font-family: "Tex Gyre Schola", serif;
+    font-size: 48px;
+    line-height: 1.2;
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(31, 56, 120);
+    margin: 0;
+}
+
+.strategy-image-pair {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.strategy-image {
+    width: 48%;
+    height: auto;
+    max-width: 380px;
+    border-radius: 8px;
+}
+
+.strategy-text {
+    line-height: 1.5;
+    color: rgb(31, 56, 120);
+    max-width: 800px;
+}
+
+/* Two Tiles Section */
+#tiles-section {
+    padding: 0;
+    background: #ffffff;
+    border-bottom: 2px solid rgb(110, 127, 217);
+}
+
+#tiles-section .section-inner {
+    max-width: 100%;
+    padding: 0;
+    gap: 0;
+}
+
+.tiles-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    width: 100%;
+    margin: 0;
+    align-items: stretch;
+}
+
+.tile {
+    position: relative;
+    border-top: 2px solid rgb(110, 127, 217);
+    border-bottom: 2px solid rgb(110, 127, 217);
+    border-radius: 0;
+    overflow: hidden;
+    height: auto;
+}
+
+.tile-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-right: 2px solid rgb(110, 127, 217);
+}
+
+.tile-right {
+    /* No right border */
+}
+
+.tile-bg-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tile-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    background: rgb(22, 79, 184);
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-family: "Constantia", serif;
+    font-size: 36px;
+    font-weight: bold;
+    transition: transform 0.2s ease;
+}
+
+.tile-button:hover {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.tile-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Section base styles */
+.section {
+    padding: 32px 20px;
+    margin: 0;
+}
+
+.section--light {
+    background: #ffffff;
+}
+
+.section--dark {
+    background: rgb(31, 56, 120);
+}
+
+.section-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+}
+
+/* Map Section */
+#map-section {
+    border-bottom: 2px solid rgb(110, 127, 217);
+    padding-bottom: 56px;
+}
+
+.map-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.map-text {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.map-button {
+    background: rgb(22, 79, 184);
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Constantia", serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: fit-content;
+}
+
+.map-image {
+    position: relative;
+}
+
+.map-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.map-legend {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px;
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+}
+
+.legend-items {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.legend-color.orthodox {
+    background: #2196f3;
+}
+
+.legend-color.moderate {
+    background: #9c27b0;
+}
+
+.legend-color.liberal {
+    background: #f44336;
+}
+
+.legend-text {
+    font-size: 14px;
+    color: rgb(31, 56, 120);
+}
+
+/* Discord Section */
+#discord-section .section-inner {
+    color: #ffffff;
+    text-align: center;
+}
+
+.discord-text {
+    color: #ffffff;
+    line-height: 1.5;
+    max-width: 600px;
+}
+
+.discord-buttons {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.discord-button {
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.discord-button:hover {
+    transform: scale(1.05);
+}
+
+.discord-button img {
+    height: 60px;
+    width: auto;
+    border-radius: 8px;
+}
+
+/* Organization Logos */
+#organizations {
+    border-bottom: 2px solid rgb(110, 127, 217);
+    padding-bottom: 56px;
+}
+
+.org-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Social Media Call to Action */
+#social-cta {
+    border-bottom: 2px solid rgb(110, 127, 217);
+    padding-bottom: 56px;
+}
+
+.social-title {
+    font-family: "Tex Gyre Schola", serif;
+    font-size: 28px;
+    line-height: 1.2;
+    color: rgb(31, 56, 120);
+    font-style: italic;
+    font-weight: bold;
+    max-width: 800px;
+    margin-bottom: 24px;
+}
+
+.social-links {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+.social-links img {
+    height: 60px;
+    width: auto;
+}
+
+/* Member Handbook Section */
+#handbook-section {
+    border-bottom: 2px solid rgb(110, 127, 217);
+    padding-bottom: 56px;
+}
+
+.handbook-text {
+    line-height: 1.5;
+    color: rgb(31, 56, 120);
+    max-width: 700px;
+}
+
+.handbook-previews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.handbook-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border: 2px solid rgb(110, 127, 217);
+}
+
+.handbook-image:hover {
+    transform: scale(1.05);
+}
+
+/* Contact Section */
+#contact-section {
+    border-bottom: 2px solid rgb(110, 127, 217);
+    padding-bottom: 56px;
+}
+
+.contact-title {
+    font-family: "Constantia", serif;
+    font-size: 24px;
+    line-height: 1.2;
+    color: rgb(31, 56, 120);
+    margin-bottom: 16px;
+}
+
+.contact-email {
+    font-family: "Constantia", serif;
+    font-size: 24px;
+    color: rgb(31, 56, 120);
+    font-weight: normal;
+}
+
+/* Disclaimer */
+.disclaimer-text {
+    color: rgb(31, 56, 120);
+    line-height: 1.5;
+}
+
+.copyright {
+    color: rgb(31, 56, 120);
+    font-size: 20px;
+    margin-top: 16px;
+}
+
+/* Modal for handbook images */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .strategy-title {
+        font-size: 36px;
+    }
+
+    .strategy-hero-inner {
+        padding: 36px 16px 44px;
+        gap: 24px;
+    }
+
+    #tiles-section {
+        padding: 0;
+    }
+
+    .tiles-container {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .tile {
+        height: auto;
+    }
+
+    .section {
+        padding: 24px 16px;
+    }
+
+    .section-inner {
+        gap: 20px;
+    }
+
+    #map-section,
+    #organizations,
+    #social-cta,
+    #handbook-section,
+    #contact-section {
+        padding-bottom: 36px;
+    }
+
+    .strategy-image-pair {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .strategy-image {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .map-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .map-text {
+        text-align: center;
+    }
+
+    .legend-items {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .discord-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-title {
+        font-size: 24px;
+    }
+
+    .social-links {
+        gap: 32px;
+    }
+
+    .contact-title {
+        font-size: 20px;
+    }
+
+    .contact-email {
+        font-size: 20px;
+    }
+
+    .handbook-previews {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .strategy-title {
+        font-size: 28px;
+    }
+
+    .strategy-hero-inner {
+        padding: 28px 12px 36px;
+        gap: 20px;
+    }
+
+    #tiles-section {
+        padding: 0;
+    }
+
+    .tiles-container {
+        gap: 0;
+    }
+
+    .tile {
+        height: auto;
+    }
+
+    .tile-button {
+        font-size: 16px;
+        padding: 6px 14px;
+    }
+
+    .section {
+        padding: 20px 12px;
+    }
+
+    .section-inner {
+        gap: 16px;
+    }
+
+    #map-section,
+    #organizations,
+    #social-cta,
+    #handbook-section,
+    #contact-section {
+        padding-bottom: 32px;
+    }
+
+    .strategy-image-pair {
+        gap: 12px;
+    }
+
+    .strategy-image {
+        width: 100%;
+    }
+
+    .map-button {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+
+    .map-legend {
+        position: static;
+        margin-top: 12px;
+        background: #ffffff;
+        border: 1px solid rgb(110, 127, 217);
+    }
+
+    .discord-button img {
+        height: 50px;
+    }
+
+    .social-title {
+        font-size: 20px;
+    }
+
+    .contact-title {
+        font-size: 18px;
+    }
+
+    .contact-email {
+        font-size: 18px;
+    }
+
+    .handbook-previews {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .modal-content {
+        max-width: 95%;
+        max-height: 95%;
+    }
+}
+
+/* Additional responsive adjustments for very small screens */
+@media (max-width: 360px) {
+    .strategy-title {
+        font-size: 24px;
+    }
+
+    .social-title {
+        font-size: 24px;
+    }
+
+    .contact-title {
+        font-size: 16px;
+    }
+
+    .contact-email {
+        font-size: 16px;
+    }
+}

@@ -198,7 +198,7 @@
 
 .theological-title {
     font-family: "Tex Gyre Schola", serif;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 1.3;
     color: rgb(31, 56, 120);
     margin: 0;
@@ -301,7 +301,7 @@
     }
     
     .theological-title {
-        font-size: 28px;
+        font-size: 24px;
     }
     
     .explanation-text {
@@ -342,7 +342,7 @@
     }
     
     .theological-title {
-        font-size: 24px;
+        font-size: 20px;
     }
     
     .explanation-text {

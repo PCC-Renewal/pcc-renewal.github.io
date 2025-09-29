@@ -200,6 +200,63 @@
                 </div>
             </section>
 
+            <!-- Mailing List Section -->
+            <section id="mailing-list-section" class="section section--light">
+                <div class="section-inner">
+                    <h2 class="mailing-list-title">Join our mailing list!</h2>
+                    <form id="mailing-list-form" class="mailing-list-form">
+                        <!-- Multiple honeypots for enhanced bot protection (hidden) -->
+                        <input
+                            type="text"
+                            name="website"
+                            id="website"
+                            style="display: none"
+                            tabindex="-1"
+                            autocomplete="off"
+                        />
+                        <input
+                            type="text"
+                            name="phone"
+                            id="phone"
+                            style="display: none"
+                            tabindex="-1"
+                            autocomplete="off"
+                        />
+                        <input
+                            type="text"
+                            name="company"
+                            id="company"
+                            style="display: none"
+                            tabindex="-1"
+                            autocomplete="off"
+                        />
+
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email here"
+                                required
+                                class="email-input"
+                            />
+                            <button
+                                type="submit"
+                                class="submit-button"
+                                id="submit-btn"
+                            >
+                                <span id="button-text">Submit</span>
+                            </button>
+                        </div>
+                    </form>
+                    <div
+                        id="form-message"
+                        class="form-message"
+                        style="display: none"
+                    ></div>
+                </div>
+            </section>
+
             <!-- Member Handbook Section -->
             <section id="handbook-section" class="section section--light">
                 <div class="section-inner">
@@ -305,6 +362,209 @@
                 modal.style.display = "none";
                 document.body.classList.remove("no-scroll");
             }
+
+            // Mailing List Form Functionality
+            (function () {
+                const form = document.getElementById("mailing-list-form");
+                const submitButton = document.getElementById("submit-btn");
+                const buttonText = document.getElementById("button-text");
+                const formMessage = document.getElementById("form-message");
+                const emailInput = document.getElementById("email");
+
+                // Obfuscated Google Apps Script Web App URL
+                const encodedUrl =
+                    "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J6VnEzdWI0dHN3dFlUVXM0UGNIYkxCRmtoMlpxVWc1MUlMQXBmQWlvS0hCTDdrdm5RT0IzbUJIRml2LVZqeWJCQ1Fidy9leGVj";
+                const SCRIPT_URL = atob(encodedUrl);
+
+                // Enhanced bot detection variables
+                let formLoadTime = Date.now();
+                let mouseMovements = 0;
+                let keystrokes = 0;
+                let focusEvents = 0;
+                let submissionToken = null;
+
+                function showMessage(message, type) {
+                    formMessage.textContent = message;
+                    formMessage.className = `form-message ${type}`;
+                    formMessage.style.display = "block";
+
+                    // Hide message after 5 seconds for success, 7 seconds for error
+                    setTimeout(
+                        () => {
+                            formMessage.style.display = "none";
+                        },
+                        type === "success" ? 5000 : 7000
+                    );
+                }
+
+                function setButtonState(loading) {
+                    if (loading) {
+                        submitButton.disabled = true;
+                        buttonText.textContent = "Sending...";
+                    } else {
+                        submitButton.disabled = false;
+                        buttonText.textContent = "Submit";
+                    }
+                }
+
+                function validateEmail(email) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailRegex.test(email);
+                }
+
+                // Generate submission token
+                function generateSubmissionToken() {
+                    return Date.now().toString();
+                }
+
+                // Enhanced bot detection setup
+                function setupBotDetection() {
+                    // Track mouse movements
+                    document.addEventListener("mousemove", function () {
+                        mouseMovements++;
+                    });
+
+                    // Track keystrokes
+                    emailInput.addEventListener("keydown", function () {
+                        keystrokes++;
+                    });
+
+                    // Track focus events
+                    emailInput.addEventListener("focus", function () {
+                        focusEvents++;
+                    });
+
+                    // Generate token when user starts interacting
+                    emailInput.addEventListener("input", function () {
+                        if (!submissionToken && this.value.length === 1) {
+                            submissionToken = generateSubmissionToken();
+                            formLoadTime = Date.now();
+                        }
+                    });
+                }
+
+                // Initialize bot detection
+                setupBotDetection();
+
+                if (form) {
+                    form.addEventListener("submit", function (e) {
+                        e.preventDefault();
+
+                        const email = emailInput.value.trim();
+                        const websiteHoneypot =
+                            document.getElementById("website").value;
+                        const phoneHoneypot =
+                            document.getElementById("phone").value;
+                        const companyHoneypot =
+                            document.getElementById("company").value;
+
+                        // Basic validation
+                        if (!email) {
+                            showMessage(
+                                "Please enter your email address.",
+                                "error"
+                            );
+                            return;
+                        }
+
+                        if (!validateEmail(email)) {
+                            showMessage(
+                                "Please enter a valid email address.",
+                                "error"
+                            );
+                            return;
+                        }
+
+                        // Enhanced honeypot checks
+                        if (
+                            websiteHoneypot.length > 0 ||
+                            phoneHoneypot.length > 0 ||
+                            companyHoneypot.length > 0
+                        ) {
+                            showMessage(
+                                "Submission failed. Please try again.",
+                                "error"
+                            );
+                            return;
+                        }
+
+                        // Enhanced bot protection checks
+                        const submissionTime = Date.now();
+                        if (submissionTime - formLoadTime < 3000) {
+                            showMessage(
+                                "Please take a moment before submitting.",
+                                "error"
+                            );
+                            return;
+                        }
+
+                        // Check for human-like interaction
+                        if (mouseMovements < 3 && keystrokes < 3) {
+                            showMessage(
+                                "Please interact with the form naturally before submitting.",
+                                "error"
+                            );
+                            return;
+                        }
+
+                        // Generate token if not already generated
+                        if (!submissionToken) {
+                            submissionToken = generateSubmissionToken();
+                        }
+
+                        // Show loading state
+                        setButtonState(true);
+                        formMessage.style.display = "none";
+
+                        // Prepare enhanced data for submission
+                        const formData = {
+                            email: email,
+                            website: websiteHoneypot,
+                            phone: phoneHoneypot,
+                            company: companyHoneypot,
+                            token: submissionToken,
+                            timestamp: new Date().toISOString(),
+                        };
+
+                        // Submit to Google Apps Script
+                        fetch(SCRIPT_URL, {
+                            method: "POST",
+                            mode: "no-cors", // Required for Google Apps Script
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify(formData),
+                        })
+                            .then(() => {
+                                // Since we use no-cors, we can't read the response
+                                // But we assume success if no error is thrown
+                                showMessage(
+                                    "Thanks! You've been added to our mailing list.",
+                                    "success"
+                                );
+                                form.reset(); // Clear the form
+                                formLoadTime = Date.now(); // Reset timing for potential resubmission
+                            })
+                            .catch((error) => {
+                                console.error("Submission error:", error);
+                                showMessage(
+                                    "Something went wrong. Please try again or contact us directly.",
+                                    "error"
+                                );
+                            })
+                            .finally(() => {
+                                setButtonState(false);
+                            });
+                    });
+
+                    // Reset form load time when user starts typing (for legitimate resubmissions)
+                    emailInput.addEventListener("input", function () {
+                        if (this.value.length === 1) {
+                            formLoadTime = Date.now();
+                        }
+                    });
+                }
+            })();
         </script>
     </body>
 </html>

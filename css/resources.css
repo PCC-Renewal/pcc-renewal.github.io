@@ -212,6 +212,18 @@
     border-top: 2px solid rgb(110, 127, 217);
 }
 
+/* Logo box link wrapper */
+.logo-box-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.logo-box-link:hover {
+    transform: scale(1.05);
+}
+
 /* Logo box */
 .logo-box {
     border: 2px solid rgb(110, 127, 217);
@@ -223,6 +235,12 @@
     align-items: center;
     gap: 16px;
     background: #ffffff;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-box:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .logo-in-box {

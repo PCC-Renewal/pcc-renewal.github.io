@@ -39,6 +39,7 @@
 .strategy-image-pair {
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     gap: 24px;
     width: 100%;
     max-width: 800px;
@@ -46,10 +47,13 @@
 }
 
 .strategy-image {
-    width: 48%;
-    height: auto;
-    max-width: 380px;
+    height: 300px;
+    width: auto;
     border-radius: 8px;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 .strategy-text {
@@ -467,6 +471,7 @@
     }
 
     .strategy-image {
+        height: auto;
         width: 100%;
         max-width: 380px;
     }
@@ -560,7 +565,9 @@
     }
 
     .strategy-image {
+        height: auto;
         width: 100%;
+        max-width: 100%;
     }
 
     .map-button {

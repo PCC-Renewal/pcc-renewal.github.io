@@ -8,6 +8,21 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Global image quality enhancement */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent image distortion when constrained */
+img:not(.strategy-image) {
+    object-fit: contain;
+}
+
 /* Layout */
 .page {
     max-width: 1200px;

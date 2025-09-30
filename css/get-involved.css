@@ -93,6 +93,51 @@
     height: auto;
 }
 
+.tile-text {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0 20px;
+    z-index: 2;
+    font-family: "Constantia", serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+.tile-text-blue {
+    color: rgb(31, 56, 120);
+}
+
+.tile-text-white {
+    color: #ffffff;
+}
+
+.discord-icons {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    z-index: 2;
+}
+
+.discord-icon-link {
+    transition: transform 0.2s ease;
+}
+
+.discord-icon-link:hover {
+    transform: scale(1.1);
+}
+
+.discord-icon {
+    width: 110px;
+    height: auto;
+}
+
 .tile-left {
     display: flex;
     align-items: center;
@@ -119,7 +164,7 @@
     border-radius: 12px;
     text-decoration: none;
     font-family: "Constantia", serif;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
     transition: transform 0.2s ease;
 }
@@ -303,7 +348,7 @@
 
 .social-title {
     font-family: "Tex Gyre Schola", serif;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 1.2;
     color: rgb(31, 56, 120);
     font-style: italic;
@@ -425,6 +470,23 @@
 }
 
 /* Responsive adjustments */
+/* iPad-specific media query */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tile-text {
+        font-size: 18px;
+        padding: 0 18px;
+    }
+    
+    .discord-icons {
+        top: 100px;
+        gap: 30px;
+    }
+    
+    .discord-icon {
+        width: 75px;
+    }
+}
+
 @media (max-width: 768px) {
     .strategy-title {
         font-size: 36px;
@@ -446,6 +508,21 @@
 
     .tile {
         height: auto;
+    }
+
+    .tile-text {
+        font-size: 16px;
+        padding: 0 16px;
+        top: 16px;
+    }
+
+    .discord-icons {
+        top: 90px;
+        gap: 30px;
+    }
+
+    .discord-icon {
+        width: 90px;
     }
 
     .section {
@@ -542,6 +619,21 @@
     .tile-button {
         font-size: 16px;
         padding: 6px 14px;
+    }
+
+    .tile-text {
+        font-size: 16px;
+        padding: 0 12px;
+        top: 12px;
+    }
+
+    .discord-icons {
+        top: 90px;
+        gap: 20px;
+    }
+
+    .discord-icon {
+        width: 65px;
     }
 
     .section {
@@ -781,5 +873,20 @@
 
     .contact-email {
         font-size: 16px;
+    }
+
+    .tile-text {
+        font-size: 14px;
+        padding: 0 10px;
+        top: 10px;
+    }
+
+    .discord-icons {
+        top: 55px;
+        gap: 16px;
+    }
+
+    .discord-icon {
+        width: 45px;
     }
 }

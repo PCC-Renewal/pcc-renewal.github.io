@@ -54,6 +54,11 @@
     image-rendering: crisp-edges;
     backface-visibility: hidden;
     transform: translateZ(0);
+    transition: transform 0.2s ease;
+}
+
+.strategy-image:hover {
+    transform: scale(1.05);
 }
 
 .strategy-text {
